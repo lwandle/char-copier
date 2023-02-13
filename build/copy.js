@@ -4,8 +4,10 @@ exports.Copier = void 0;
 class Copier {
     constructor() {
         this.source = ["a", "b", "c", "\n", "d", "e", "f"];
-        this.copy();
     }
+    // constructor() {
+    //   this.copy();
+    // }
     readChar() {
         return this.source[0];
     }
@@ -13,10 +15,10 @@ class Copier {
         return this.source.slice(0, count);
     }
     writeChar(char) {
-        console.log(char);
+        const _char = char;
     }
     writeChars(chars) {
-        console.log(chars);
+        const _chars = chars;
     }
     copyMultiple() {
         let index = 0;

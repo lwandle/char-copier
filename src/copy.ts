@@ -4,10 +4,6 @@ import { ISouce } from "./source";
 export class Copier implements ISouce, IDestination {
   public source: string[] = ["a", "b", "c", "\n", "d", "e", "f"];
 
-  constructor() {
-    this.copy();
-  }
-
   public readChar(): string {
     return this.source[0];
   }
@@ -17,11 +13,11 @@ export class Copier implements ISouce, IDestination {
   }
 
   public writeChar(char: string): void {
-    console.log(char);
+    const _char: string = char;
   }
 
   public writeChars(chars: string[]) {
-    console.log(chars);
+    const _chars: string[] = chars;
   }
 
   public copyMultiple(): void {

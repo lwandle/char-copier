@@ -43,17 +43,28 @@ describe("The destination function", () => {
     });
     it("should only have values that are before the new line", () => {
         const copier = new copy_1.Copier();
-        spyOn(copier, "readChars").and.returnValue(["a", "b", "c", "\n", "d", "e"]);
+        spyOn(copier, "readChars").and.returnValue([
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "\n",
+            "h",
+            "i",
+        ]);
         spyOn(copier, "writeChars");
         copier.copyMultiple();
-        expect(copier.writeChars).toHaveBeenCalledWith(["a", "b", "c"]);
+        expect(copier.writeChars).toHaveBeenCalledWith([
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+        ]);
     });
 });
-// describe("Test", function () {
-//   it("should fail", function () {
-//     expect(true).toBe(true);
-//   });
-//   it("should pass", function () {
-//     expect(true).toBe(true);
-//   });
-// });
